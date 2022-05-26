@@ -10,7 +10,7 @@ SRWarp will help you understanding the code
 
 ## Training
 
-Please run the following script:
+Please run the following script at `src`:
 ```bash
 $ bash run.sh
 ```

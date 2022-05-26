@@ -1,0 +1,15 @@
+total \
+    = $(w-id) * l1(ref, warped_keep) \
+    + $(w-recon) * mloss(ref, recon, mask) \
+    + $(w-dual) * mloss(warped, warped_direct, mask) \
+    + $(w-adv) * adv(dummy_1, dummy_2, dummy_3, fake, real) \
+    + psnr(ref, warped_keep) \
+    + mpsnr(ref, recon, mask) \
+    + mpsnr(warped, warped_direct, mask) \
+    + mpsnr(hr, sr, mask) \
+    + disc(adv)
+
+w-id = 1
+w-recon = 1
+w-dual = 1
+w-adv = 0.01
